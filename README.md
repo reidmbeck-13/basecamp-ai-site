@@ -46,7 +46,7 @@ basecamp-ai-site/
 | Business name | Basecamp AI Consulting |
 | Legal name | Basecamp Solutions LLC DBA Basecamp AI Consulting |
 | Contact email | reid@basecampai.io |
-| Booking link | https://calendar.app.google/c8P6Mfib5C5HwzKJ7 |
+| Booking link | https://calendly.com/reid-basecampai/30min |
 | Netlify site | *(add your Netlify URL here after first deploy)* |
 | Custom domain | *(add when ready)* |
 
@@ -104,7 +104,6 @@ Stored in `/assets/`. Use the correct version per context:
 
 - [ ] Add custom domain (`basecampai.io`) in Netlify
 - [ ] Add testimonials/case studies once first clients close
-- [ ] Swap Google Calendar link for Calendly if you switch tools
 - [ ] Add niche-specific headline once target market is locked in
 - [ ] Consider adding a favicon (use chevron logo)
 
