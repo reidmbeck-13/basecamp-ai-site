@@ -6,7 +6,7 @@ Live site for **Basecamp AI Consulting** (Basecamp Solutions LLC DBA Basecamp AI
 
 ## Stack
 
-- Plain HTML/CSS/JS — single file, no framework, no build step
+- Plain HTML/CSS/JS — one `index.html` plus `/assets` for images (no framework, no build step)
 - Hosted on **Netlify** (free tier), connected to this GitHub repo
 - Auto-deploys on every push to `main`
 
@@ -16,9 +16,9 @@ Live site for **Basecamp AI Consulting** (Basecamp Solutions LLC DBA Basecamp AI
 
 ```
 basecamp-ai-site/
-├── index.html       ← The entire site (single file)
+├── index.html       ← Page markup, styles, and scripts
 ├── README.md        ← This file
-└── assets/          ← Logo files and any future images
+└── assets/          ← Logos and images (referenced from index.html)
 ```
 
 ---
@@ -76,27 +76,29 @@ basecamp-ai-site/
 
 ## Logo Files
 
-Stored in `/assets/`. Use the correct version per context:
+Stored in `/assets/` and linked with relative paths (e.g. `assets/…`).
 
-| File | Use when |
-|------|----------|
-| `Basecamp_Full_Logo_Light.png` | Light/cream backgrounds (nav) |
-| `Basecamp_Full_Logo_Dark.png` | Dark/navy backgrounds (footer) |
-| `Basecamp_Chevron_Only_Logo.png` | Favicon or icon-only contexts |
+| File | Use |
+|------|-----|
+| `Basecamp_Chevron_only_logo.svg` | **Nav** — chevron mark next to the “Basecamp AI Consulting” wordmark (transparent background; teal artwork reads on the dark header) |
+| `Basecamp_Full_Logo_Dark.png` | **Footer** — full wordmark on the dark footer (sized for readability) |
+| Other PNGs in `/assets/` | Alternate or legacy exports (e.g. light/dark variants); swap paths in `index.html` if you change which file is used |
 
-> Note: Logos are currently embedded as base64 directly in `index.html` so the site works as a true single file. If the file gets too large, move them to `/assets/` and reference them with relative paths.
+**Favicon:** Not set yet; you can point a `<link rel="icon">` at the chevron SVG or a small PNG in `/assets/`.
 
 ---
 
 ## Sections (in order)
 
-1. **Nav** — Logo + business name + Book a Call CTA
-2. **Hero** — Headline, subheadline, two CTAs
+1. **Nav** — Chevron SVG + wordmark + Book a Call (Calendly)
+2. **Hero** — Headline, subheadline, primary CTA **Book a Free AI Strategy Call** + email
 3. **Services** — Training / Strategy & Discovery / Implementation & Build
-4. **About** — Founder background, stats, pull quote
-5. **FAQ** — 5 objection-handling questions (accordion)
-6. **CTA Banner** — Final push to book or email
-7. **Footer** — Logo, tagline, email
+4. **Mid-page CTA strip** — Short copy + strategy call + email
+5. **About** — Founder background, stats, pull quote
+6. **FAQ** — 5 objection-handling questions (accordion)
+7. **CTA Banner** — Final push to book (Calendly) or email
+8. **Footer** — Full dark logo, tagline, email  
+9. **Mobile** — Sticky bottom bar with Calendly + email (small screens)
 
 ---
 
